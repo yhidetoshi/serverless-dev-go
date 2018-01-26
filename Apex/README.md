@@ -63,5 +63,14 @@
 - GOのパッケージ取得
   - `$ go get -u github.com/aws/aws-lambda-go/lambda`
 
+- `apex deploy`
+```
+   • creating function         env= function=hello
+   • created alias current     env= function=hello version=1
+   • function created          env= function=hello name=go_hello version=1
+```
+
+→ AWS LambdaにFunctionが作成される
+
 - `go apex invoke hello < event.json`
 > {"Answer:":"Hello !!"}
