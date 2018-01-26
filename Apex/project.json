@@ -1,0 +1,8 @@
+{
+  "name": "go",
+  "description": "go",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::XXX:role/go_lambda_function",
+  "environment": {}
+}
