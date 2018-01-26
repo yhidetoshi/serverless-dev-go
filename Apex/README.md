@@ -6,10 +6,6 @@
  - install
    - `$ curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh`
 
-- GOのパッケージ取得
-  - `$ go get -u github.com/aws/aws-lambda-go/lambda`
-
-
 - `$ apex init`
 ```
              _    ____  _______  __
@@ -39,7 +35,7 @@
   Setup complete, deploy those functions!
 ```
 
-
+- ディレクトリ構成
 ```
 .
 ├── event.json
@@ -62,6 +58,10 @@
             └── aws-lambda-go
                 ├─ ・・・
 ```
+- GOPATHを設定
+
+- GOのパッケージ取得
+  - `$ go get -u github.com/aws/aws-lambda-go/lambda`
 
 - `go apex invoke hello < event.json`
 > {"Answer:":"Hello !!"}
