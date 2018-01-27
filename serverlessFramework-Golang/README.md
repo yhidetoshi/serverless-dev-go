@@ -45,3 +45,9 @@ endpoints:
 functions:
   hello: myservice-dev-hello
 ```
+- バージニア北部にfunctionができており、実行したら下記が表示された。
+```
+{
+  "message": "Go Serverless v1.0! Your function executed successfully!"
+}
+```
