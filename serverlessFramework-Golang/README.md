@@ -51,3 +51,45 @@ functions:
   "message": "Go Serverless v1.0! Your function executed successfully!"
 }
 ```
+
+### EC2インスタンスの情報を取得するコードをLambda上で実行した時のめも
+
+1. go get <github_package>
+2. input credentials
+3. 上記のLambdaへのデプロイした方法でデプロイして実行する
+
+```
+package main
+
+import (
+	"fmt"
+	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/ec2"
+)
+
+func HandleRequest() {
+	sess := session.Must(session.NewSession())
+	creds := credentials.NewStaticCredentials("XXXXX", "YYYYY", "")
+	svc := ec2.New(
+		sess,
+		aws.NewConfig().WithRegion("ap-northeast-1").WithCredentials(creds),
+	)
+以下、情報取得のプログラムは省略
+(https://github.com/yhidetoshi/clitoolgoaws)
+```
+
+- ログ出力
+```
+START RequestId: cf2b6237-03de-11e8-bf8d-c3e9b285f2ac Version: $LATEST
+{
+ InstanceNmae:	test
+ InstanceType:	t2.micro
+ AvailabilityZone:	ap-northeast-1c
+ State:	stopped
+ PrivateIP:	172.31.8.141
+}
+END RequestId: cf2b6237-03de-11e8-bf8d-c3e9b285f2ac 
+```
