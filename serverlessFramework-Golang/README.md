@@ -55,7 +55,7 @@ functions:
 
 ### EC2インスタンスの情報を取得するコードをLambda上で実行した時のめも
 
-1. go get <github_package>
+1. go get <github.com/xxx>
 2. input credentials
 3. 上記のLambdaへのデプロイした方法でデプロイして実行する
 
