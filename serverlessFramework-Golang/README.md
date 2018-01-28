@@ -2,6 +2,7 @@
 
 - 環境
   - MacOS(10.11.6) 
+  - Go(aws-sdk-go)のコードをaws-lambdaにデプロイする
 
 - `$ npm install -g serverless`
 
