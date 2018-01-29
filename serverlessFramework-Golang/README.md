@@ -55,9 +55,11 @@ functions:
 
 ### EC2インスタンスの情報を取得するコードをLambda上で実行した時のめも
 
-1. go get <github.com/xxx>
-2. input credentials
-3. 上記のLambdaへのデプロイした方法でデプロイして実行する
+1. `go get <github.com/xxx>`
+1. input credentials
+1. `serverless.yml`の `region` を `ap-northeast-1`に変更
+1. 上記のLambdaへのデプロイした方法でデプロイして実行する
+
 
 ```
 README.md      bin            main.go        pkg            serverless.yml src
