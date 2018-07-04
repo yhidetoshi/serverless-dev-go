@@ -79,7 +79,7 @@ import (
 
 func HandleRequest() {
 	sess := session.Must(session.NewSession())
-	creds := credentials.NewStaticCredentials("XXXXX", "YYYYY", "")
+	creds := credentials.NewStaticCredentials()
 	svc := ec2.New(
 		sess,
 		aws.NewConfig().WithRegion("ap-northeast-1").WithCredentials(creds),
